@@ -110,18 +110,8 @@ int main(int argc, char* argv[]) {
 
         //std::cout << "GAME " << aoc.gameID << ": " << aoc.blocks[0] << " red " << aoc.blocks[1] << " green " << aoc.blocks[2] << " blue" << std::endl;
     
-        // Check if Game is possible
-        bool validGame = true;
-        for (int i = 0; i < maxBlocks.size(); i++){
-            if (aoc.blocks[i] > maxBlocks[i]) {
-                validGame = false;
-            }
-        }
-
-        // If game is valid, add the gameID to the summation
-        if (validGame){
-            sum += aoc.gameID;
-        }
+        // Difference in Part 2!
+        sum += aoc.blocks[0]*aoc.blocks[1]*aoc.blocks[2];
 
         // Clear the Samples
         sample.clear();
